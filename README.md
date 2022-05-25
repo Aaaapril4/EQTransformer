@@ -1,5 +1,5 @@
   
-![event](docs/source/figures/logo.png)                
+![event](docs/source/figures/logo.png)                   
 
 # An AI-Based Earthquake Signal Detector and Phase Picker          
 
@@ -21,7 +21,7 @@
  
 The **EQTransformer** python 3 package includes modules for downloading continuous seismic data, preprocessing, performing earthquake signal detection, and phase (P & S) picking using pre-trained models, building and testing new models, and performing a simple phase association. 
 
-Developer: S. Mostafa Mousavi
+Developer: S. Mostafa Mousavi (smousavi05@gmail.com)
 
 * [Links](#Links) 
 * [Reference](#Reference)                                
@@ -71,7 +71,7 @@ BibTeX:
 
     conda install -c smousavi05 eqtransformer 
     
-##### Note: You may need to repeat executing the last line multiple time to succeed.  
+##### Note: sometimes you need to keep repeating executing the last line multiple time to succeed.  
 
 #### Via PyPI:
 
@@ -83,6 +83,7 @@ If you already have `Obspy` installed on your machine, you can get **EQTransform
 #### From source:
 
 The sources for **EQTransformer** can be downloaded from the `Github repo`.
+
 ##### Note: the gitgub version has been modified for Tensorflow 2.5.0
 
 You can either clone the public repository:
@@ -101,6 +102,9 @@ Once you have a copy of the source, you can cd to **EQTransformer** directory an
 If you have installed **EQTransformer** Python package before and want to upgrade to the latest version, you can use the following command:
 
     pip install EQTransformer -U
+    
+##### Note: You can install EqT on M1 laptop with python=3.9 from the source (GitHub) code by changing tensorflow ~= 2.5.0 to tensorflow-maco ~= 2.5.0 in the setup.py.  
+
 
 -------------
 ## Tutorials
@@ -115,9 +119,9 @@ https://rebrand.ly/EQT-examples
 
 Note: to run the notebook exampels, you may need to reinstall the jupyter on the same environment that **EQTransformer** has been installed.
 
-**QuakeLabeler** (https://maihao14.github.io/QuakeLabeler/) is a software package that can be used to create labeled taining dataset for EQTransformer (i.e. STEAD format). 
+**QuakeLabeler** (https://maihao14.github.io/QuakeLabeler/) is a software package that can be used to create labeled training dataset for EQTransformer (i.e. STEAD format). 
 
-**SeisBench** (https://github.com/seisbench/seisbench/)   (https://arxiv.org/abs/2111.00786) is an open source benchmarking package which makes it easy to apply pretrained EqT model, retraine it, fine tune it (transfer learning), or compare it with other models. 
+**SeisBench** (https://github.com/seisbench/seisbench/)   (https://arxiv.org/abs/2111.00786) is an open source benchmarking package which makes it easy to apply pre trained EqT model, retrain it, fine tune it (transfer learning), or compare it with other models. 
 
 -------------------
 ## A Quick Example
@@ -166,6 +170,7 @@ The **EQTransformer** package is distributed under the `MIT license`, a permissi
 
 -----------------
 ## Reporting Bugs
+#### Please see https://github.com/smousavi05/EQTransformer/issues?q=is%3Aissue+is%3Aclosed for a list of issues/bugs that have been already reported/fixed before filing a new bug report.
 
 Report bugs at https://github.com/smousavi05/EQTransformer/issues.
 
