@@ -103,8 +103,14 @@ If you have installed **EQTransformer** Python package before and want to upgrad
 
     pip install EQTransformer -U
     
-##### Note: You can install EqT on M1 laptop with python=3.9 from the source (GitHub) code by changing tensorflow ~= 2.5.0 to tensorflow-maco ~= 2.5.0 in the setup.py.  
+##### To nstall EqT on M1 laptop with python>=3.9 from the source (GitHub) code by changing tensorflow to tensorflow-maco in the setup.py and follow the these steps:
 
+      conda create -n eqt python=3.10
+      conda activate eqt
+      conda install -c apple tensorflow-deps
+      conda install obspy jupyter pandas
+      pip install tensorflow-macos
+      python3 setup.py install
 
 -------------
 ## Tutorials
@@ -116,6 +122,8 @@ https://rebrand.ly/EQT-documentations
 and/or 
 
 https://rebrand.ly/EQT-examples
+
+Note: there is not much difference between the two models (i.e. original and conservative models) regarding the network architecture (only 1 or 2 layers). The main difference comes from the training procedure and the hyperparameters used for data augmentation during the training. So if you are interested in maximizing the number of detections and are not concerned about the false positive rates (which you can remove in association and location steps), you should use the original model with higher threshold values. In contrast, if you care about only detecting true events, the conservative model (with much lower threshold levels) suits you better. 
 
 Note: to run the notebook exampels, you may need to reinstall the jupyter on the same environment that **EQTransformer** has been installed.
 
